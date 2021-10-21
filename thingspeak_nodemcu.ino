@@ -1,42 +1,17 @@
-/*
-  WriteSingleField
-  
-  Description: Writes a value to a channel on ThingSpeak every 20 seconds.
-  
-  Hardware: ESP8266 based boards
-  
-  !!! IMPORTANT - Modify the secrets.h file for this project with your network connection and ThingSpeak channel details. !!!
-  
-  Note:
-  - Requires ESP8266WiFi library and ESP8622 board add-on. See https://github.com/esp8266/Arduino for details.
-  - Select the target hardware from the Tools->Board menu
-  - This example is written for a network using WPA encryption. For WEP or WPA, change the WiFi.begin() call accordingly.
-  
-  ThingSpeak ( https://www.thingspeak.com ) is an analytic IoT platform service that allows you to aggregate, visualize, and 
-  analyze live data streams in the cloud. Visit https://www.thingspeak.com to sign up for a free account and create a channel.  
-  
-  Documentation for the ThingSpeak Communication Library for Arduino is in the README.md folder where the library was installed.
-  See https://www.mathworks.com/help/thingspeak/index.html for the full ThingSpeak documentation.
-  
-  For licensing information, see the accompanying license file.
-  
-  Copyright 2018, The MathWorks, Inc.
-*/
-
 #include "ThingSpeak.h"
 #include <ESP8266WiFi.h>
 // Use this file to store all of the private credentials 
 // and connection details
 
-#define SECRET_SSID "Hotspot"    // replace MySSID with your WiFi network name
-#define SECRET_PASS "987654321"  // replace MyPassword with your WiFi password
+#define SECRET_SSID ""    // replace MySSID with your WiFi network name
+#define SECRET_PASS ""  // replace MyPassword with your WiFi password
 
 #define SECRET_CH_ID 948356      // replace 0000000 with your channel number
 #define SECRET_WRITE_APIKEY "M8WQX2HQUF7817N1"   // replace XYZ with your channel write API Key
 
 
-const char* ssid = "Hotspot";   // your network SSID (name) 
-const char* pass = "987654321";   // your network password
+const char* ssid = "";   // your network SSID (name) 
+const char* pass = "";   // your network password
 WiFiClient  client;
 
 unsigned long myChannelNumber = 930711;
