@@ -1,4 +1,3 @@
-
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -205,7 +204,7 @@ def PathFind():
 button7 = tkinter.Button(tkWindow, text='PathFind', bg='orange', command=PathFind)
 button7.pack(side=BOTTOM)
 def Resultcomparison():
- y=[70.6,86.2,75.4,82.4,89.2,84.1]
+ y=[]
  x=['KNN','LogReg','NB','RF','LSTM','SVM']
  plt.bar(x,y,color='blue')
  plt.title('Comparison Graph')
